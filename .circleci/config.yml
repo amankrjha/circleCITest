@@ -1,9 +1,16 @@
 version: 2
 jobs:
   build:
+    branch: /feature_.*/
     docker:
       - image: circleci/node
     steps:
-      branch: /feature_.*/
       - checkout
       - run: echo "hello feature"
+  build2:
+    branch: dev_integration
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: echo "hello integration"
