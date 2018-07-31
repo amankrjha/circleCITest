@@ -11,3 +11,13 @@ jobs:
       - run: 
         command: echo "hello $CIRCLE_BRANCH"
         command: git merge dev_integration
+  build:
+    docker:
+      - image: circleci/node
+    branches: 
+      only: 
+        - "dev_integration"
+    steps:
+      - checkout
+      - run: 
+        command: echo "hello $CIRCLE_BRANCH"
