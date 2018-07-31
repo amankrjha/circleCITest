@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  feature_build:
+  build:
     docker:
       - image: circleci/node
     branches: 
