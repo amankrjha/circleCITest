@@ -1,11 +1,13 @@
 version: 2
 jobs:
-  checkout:
-    post:
-      - git merge dev_integration
-  build:
+  feature_build:
     docker:
       - image: circleci/node
+    branches: 
+      only: 
+        - "feature_.*"
     steps:
       - checkout
-      - run echo "hello $CIRCLE_BRANCH"
+      - run: 
+        command: echo "hello $CIRCLE_BRANCH"
+        command: git merge dev_integration
