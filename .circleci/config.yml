@@ -9,6 +9,3 @@ jobs:
         echo "Hello feature";
         git merge dev_integration;
         fi
-      -> if [$CIRCLE_BRANCH == "dev_integration"]; then 
-        echo "Hello DEV";
-        fi
