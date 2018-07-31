@@ -1,11 +1,11 @@
 version: 2
 jobs:
+  checkout:
+    post:
+      - git merge dev_integration
   build:
     docker:
       - image: circleci/node
     steps:
       - checkout
-      - > if [$CIRCLE_BRANCH == "feature_.*"]; then 
-        echo "Hello feature"
-        git merge dev_integration
-        fi
+      - run echo "hello $CIRCLE_BRANCH"
