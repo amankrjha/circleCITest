@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - run: 
-        command: echo "hello $CIRCLE_BRANCH"
-        command: git merge dev_integration
+          command: echo "hello $CIRCLE_BRANCH"
+          command: git merge dev_integration
   build:
     docker:
       - image: circleci/node
@@ -20,4 +20,4 @@ jobs:
     steps:
       - checkout
       - run: 
-        command: echo "hello $CIRCLE_BRANCH"
+          command: echo "hello $CIRCLE_BRANCH"
