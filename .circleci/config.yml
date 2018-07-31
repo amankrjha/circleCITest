@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node
     steps:
       - checkout
-      -> if [$CIRCLE_BRANCH == "feature_.*"]; then 
-        echo "Hello feature";
-        git merge dev_integration;
+      - > if [$CIRCLE_BRANCH == "feature_.*"]; then 
+        echo "Hello feature"
+        git merge dev_integration
         fi
