@@ -3,7 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node
-    branch: /feature_.*/
+    branches:
+      only: /feature_.*/
     steps:
       - checkout
       - run: 
@@ -16,7 +17,8 @@ jobs:
   build:
     docker:
       - image: circleci/node
-    branch: dev_integration
+    branches:
+      only: dev_integration
     steps:
       - checkout
       - run: 
