@@ -10,7 +10,9 @@ jobs:
       - run:
           command: echo "git user $GIT_USER"
       - run:
-          command : git config --global user.name $GIT_USER
+          command : git config --global user.name "$GIT_USER"
+      - run:
+          command : git config --global user.email $GIT_USER_EMAIL
       - run: 
           command: git pull dev_integration
       - run:
