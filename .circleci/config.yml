@@ -7,6 +7,10 @@ jobs:
       - checkout
       - run: 
           command: echo "helllllo $CIRCLE_BRANCH"
+      - run:
+          command: echo "git user $GIT_USER"
+      - run:
+          command : git config --global user.name $GIT_USER
       - run: 
           command: git pull dev_integration
       - run:
