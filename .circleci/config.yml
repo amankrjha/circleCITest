@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node
     branches: 
       only: 
-        - "feature_.*"
+        - /"feature_.*"/
     steps:
       - checkout
       - run: 
