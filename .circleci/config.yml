@@ -9,6 +9,7 @@ jobs:
       - run: 
           command: echo "hello $CIRCLE_BRANCH"
           command: git merge dev_integration
+          command: echo "git merge done"
   build:
     docker:
       - image: circleci/node
