@@ -3,8 +3,6 @@ jobs:
   feature_build:
     docker:
       - image: circleci/node
-    branches:
-      only: feature_calender
     steps:
       - checkout
       - run: 
@@ -17,12 +15,18 @@ jobs:
   int_build:
     docker:
       - image: circleci/node
-    branches:
-      only: dev_integration
     steps:
       - checkout
       - run: 
           command: echo "hello $CIRCLE_BRANCH"
+  build:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - run: 
+          command: echo "Yello $CIRCLE_BRANCH"
+
 workflows:
   version: 2
   feature_int:
