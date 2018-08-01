@@ -6,12 +6,12 @@ jobs:
     steps:
       - checkout
       - run: 
-          commands: 
-            - echo "helllllo $CIRCLE_BRANCH"
+          command: echo "helllllo $CIRCLE_BRANCH"
       - run: 
           command: git merge dev_integration
       - run:
           command: echo "git merge done"
+
   int_build:
     docker:
       - image: circleci/node
