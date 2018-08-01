@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/node
     branches:
-      only: /feature_.*/
+      only: feature_calender
     steps:
       - checkout
       - run: 
