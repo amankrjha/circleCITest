@@ -8,7 +8,7 @@ jobs:
       - run: 
           command: echo "helllllo $CIRCLE_BRANCH"
       - run: 
-          command: git merge dev_integration
+          command: git pull dev_integration
       - run:
           command: echo "git merge done"
 
